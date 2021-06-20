@@ -87,31 +87,36 @@ function mykeydown(e){
     if (keypress=="72") {
       console.log("h");
       randomlh= Math.floor(Math.random()*5);
-       imageupdate(left_hand(randomlh));
+      decidedhand=left_hand[randomlh];
+       imageupdate(decidedhand);
     }
 
     if (keypress=="82") {
       console.log("r");
       randomrh=Math.floor(Math.random()*4);
-      imageupdate(right_hand(randomrh));
+      decidedrh=right_hand[randomrh];
+       imageupdate(decidedrh);
     }
 
     if (keypress=="66") {
       console.log("b");
       randombody=Math.floor(Math.random()*3);
-      imageupdate(body_hero(randombody));
+      decidedbody=body_hero[randombody];
+      imageupdate(decidedbody);
     }
 
     if (keypress=="70") {
       console.log("f");
       randomface=Math.floor(Math.random()*4);
-      imageupdate(facey_hero(randomface));
+      decidedface=facey_hero[randomface];
+      imageupdate(decidedface);
     }
 
     if (keypress=="76") {
       console.log("l");
       randomlegs=Math.floor(Math.random()*3);
-      imageupdate(legs_both(randomlegs));
+      decidedlegs=legs_both[randomlegs];
+      imageupdate(decidedlegs);
     }
 }
 
@@ -125,7 +130,7 @@ function up(){
 }
 
 function down(){
-  if (playery>=0) {
+  if (playery<=600) {
        playery=playery+blockheight;
        canvas.remove(player);
        playerupdate();
@@ -143,7 +148,7 @@ function left(){
 }
 
 function right(){
-  if (playerx>=0) {
+  if (playerx<=1000) {
        playerx=playerx+blockwidth;
        canvas.remove(player);
        playerupdate();

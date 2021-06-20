@@ -7,8 +7,12 @@
 #mycanvas
 {
     border-width:10px;
-    background-color: white; 
+    background-color:rgb(223, 223, 223) ; 
     border-style:ridge;
+}
+
+#head_info{
+    background-color: chartreuse;
 }
 
 h2
@@ -16,6 +20,7 @@ h2
 	border-radius: 10px;
 	width: 200px;
 	padding: 5px;
+	background-color: crimson;
  }
 h3
 {
